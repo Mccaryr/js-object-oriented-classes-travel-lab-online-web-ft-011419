@@ -1,5 +1,4 @@
 class Driver{
-  this.name = name 
-  this.startDate = startDate 
+  this.name = name
+  this.startDate = startDate
 }
-
