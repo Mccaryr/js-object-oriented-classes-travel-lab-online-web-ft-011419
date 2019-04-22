@@ -20,21 +20,20 @@ class Driver{
   }
 }
 
-class Route{
-  constructor(beginningLocation, endingLocation){
+class Route {
+  constructor(beginningLocation, endingLocation) {
     this.beginningLocation = beginningLocation
     this.endingLocation = endingLocation
   }
-  blocksTravelled(){
-    let vertical = Math.abs(this.beginningLocation - this.endingLocation)
+  blocksTravelled() {
+    let vertical = Math.abs(this.beginningLocation.vertical - this.endingLocation.vertical)
     let horizontal = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal))
     return (vertical + horizontal)
   }
-  estimatedTime(peak) {
-    if (peak === true){
-    return (this.blocksTravelled() / 2)
+  estimatedTime(peakHours) {
+    if (peakHours === true) {
+      return (this.blocksTravelled()/2)
+    } else {return (this.blocksTravelled()/3)
+    }
   }
-  else {return (this.blocksTravelled()/3)
-  }
-}
 }
