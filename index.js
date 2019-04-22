@@ -30,4 +30,10 @@ class Route{
     let horizontal = Math.abs(eastWest.indexOf(this.beginningLocation.horizontal) - eastWest.indexOf(this.endingLocation.horizontal))
     return (vertical + horizontal)
   }
+  estimatedTime(peak) {
+    if (peak === true)
+    return (this.blocksTravelled() / 2)
+  }
+  else {return (this.blocksTravelled()/3)
+  }
 }
